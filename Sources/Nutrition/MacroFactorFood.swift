@@ -1,7 +1,7 @@
 import Foundation
 
 /// JSON schema for logging a food into MacroFactor at the current date and time.
-public struct MacroFactorFood: Codable, Equatable {
+public struct MacroFactorFood: Codable, Equatable, Sendable {
 
   /// Stable identifier for your Shortcut or script.
   public let source: String

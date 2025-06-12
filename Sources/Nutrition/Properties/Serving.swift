@@ -1,7 +1,7 @@
 import Foundation
 
 /// Quantity represented by the ``MacroFactorFood`` and its nutritional content.
-public enum Serving: Equatable {
+public enum Serving: Equatable, Sendable {
   case one
   case per100Grams
   case per100ML
@@ -9,7 +9,7 @@ public enum Serving: Equatable {
   case custom(CustomServing)
 
   /// For arbitrary measures, like "handfuls" or "hamburgers"
-  public struct CustomServing: Codable, Equatable {
+  public struct CustomServing: Codable, Equatable, Sendable {
     public let amount: Decimal
     public let label: String
     public let weight: Decimal
@@ -22,7 +22,7 @@ public enum Serving: Equatable {
   }
 
   /// For a limited set of input weight and volume units
-  public struct MeasuredServing: Codable, Equatable {
+  public struct MeasuredServing: Codable, Equatable, Sendable {
     public let amount: Decimal
     public let unit: Unit
 
@@ -33,7 +33,7 @@ public enum Serving: Equatable {
   }
 
   /// A limited set of input weight and volume units
-  public enum Unit: String, Codable, Equatable, CaseIterable {
+  public enum Unit: String, Codable, Equatable, CaseIterable, Sendable {
     case grams
     case pounds
     case ounces

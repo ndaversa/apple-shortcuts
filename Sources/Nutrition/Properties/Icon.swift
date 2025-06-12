@@ -1,5 +1,5 @@
 /// Cartoon shown in MacroFactor's food log. Doubles as a metadata tag (e.g., is a coffee).
-public enum Icon: String, Codable, CaseIterable {
+public enum Icon: String, Codable, CaseIterable, Sendable {
   case water
   case coffee
   case coffeeCappuccino

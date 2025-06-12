@@ -1,7 +1,7 @@
 import Foundation
 
 /// Encoding container for a JSON dictionary `[String: Decimal]`. Keys are the String raw value of ``Nutrition/Nutrient``. Values are in grams, unless [otherwise specified](<doc:Nutrient#Gram-Exceptions>)
-public struct NutritionalContent: Equatable {
+public struct NutritionalContent: Equatable, Sendable {
 
   @_documentation(visibility: internal)
   public var nutrients: [Nutrient: Decimal]

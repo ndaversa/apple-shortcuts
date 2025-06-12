@@ -1,7 +1,7 @@
 import Foundation
 
 /// JSON schema for the output of Shortcuts that log food or report progress toward today's goals.
-public struct MacroFactorTodaySummary: Codable, Equatable {
+public struct MacroFactorTodaySummary: Codable, Equatable, Sendable {
 
   /// Sum of nutrients in all logged food and drink today. All units are grams unless specified otherwise in ``Nutrition/Nutrient`` documentation.
   public let consumed: NutritionalContent

@@ -31,7 +31,7 @@
 /// | ``Nutrient/vitaminK``      | `mcg`   |
 /// | ``Nutrient/selenium``      | `mcg`   |
 
-public enum Nutrient: String, CaseIterable, Codable {
+public enum Nutrient: String, CaseIterable, Codable, Sendable {
   /// kcal
   case energy
   case carbs
