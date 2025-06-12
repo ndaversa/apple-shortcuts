@@ -1,7 +1,7 @@
 import Foundation
 
 /// Encoding container for a JSON dictionary. Keys are the String raw value of ``Nutrition/Nutrient``. Values are ``GoalConsumptionRemaining``.
-public struct GoalConsumptionRemainingByNutrientDictionary: Equatable {
+public struct GoalConsumptionRemainingByNutrientDictionary: Equatable, Sendable {
 
   @_documentation(visibility: internal)
   public var nutrients: [Nutrient: GoalConsumptionRemaining]
